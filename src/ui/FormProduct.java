@@ -19,16 +19,18 @@ public class FormProduct extends JFrame{
     private JLabel lblQuantity;
 
     public FormProduct(){
-        initializationComponents();
+        initComponents();
         allComponents();
     }
-    public void initializationComponents(){
-        setTitle("Tela de login");
+    
+    public void initComponents(){
+        setTitle("Login");
         setSize(300, 150);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setContentPane(pnlFormProduct);
         setVisible(true);
     }
+    
     public void allComponents(){
         btnConfirmar.addActionListener(new ActionListener() {
             @Override

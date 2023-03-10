@@ -20,23 +20,25 @@ public class FormUser extends JFrame{
     private JLabel lblLastName;
     private JLabel lblLogin;
     private JLabel lblPassword;
+    
     public FormUser() {
-        initializationComponents();
+        initComponents();
         allComponents();
 }
-    public void initializationComponents(){
-        setTitle("Tela de login");
+    
+    public void initComponents(){
+        setTitle("Login");
         setSize(300, 150);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setContentPane(pnlFormUser);
         setVisible(true);
     }
+    
     public void allComponents(){
         btnEnviar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 User user = new User(txtName.getText(), txtLastName.getText(), txtDepartment.getText(),txtFunction.getText(),txtLogin.getText(),new String(pwdPassword.getPassword()));
-
                 JOptionPane.showMessageDialog(null,user.getAll());
             }
         });
